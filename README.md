@@ -2,6 +2,7 @@
 
 [![GitHub Release](https://img.shields.io/github/v/release/ryohidaka/action-cargo-publish)](https://github.com/ryohidaka/action-cargo-publish/releases/)
 [![Test Action](https://github.com/ryohidaka/action-cargo-publish/actions/workflows/test.yml/badge.svg)](https://github.com/ryohidaka/action-cargo-publish/actions/workflows/test.yml)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 GitHub Actions to publish Rust crates to crates.io.
 
