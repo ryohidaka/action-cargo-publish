@@ -15,7 +15,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: ryohidaka/action-cargo-publish@v1
+      - uses: ryohidaka/action-cargo-publish@v0.1.0
         with:
           path: "."
           token: ${{ secrets.CARGO_REGISTRY_TOKEN }}
