@@ -16,10 +16,15 @@ jobs:
     steps:
       - uses: ryohidaka/action-cargo-publish@v1
         with:
+          path: "."
+          token: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+          dry-run: false
 ```
 
 ## Inputs
 
-| Input | Description | Required | Default |
-| ----- | ----------- | -------- | ------- |
-|       |             |          |         |
+| Input     | Description                                           | Required | Default |
+| --------- | ----------------------------------------------------- | -------- | ------- |
+| `path`    | The path to the Cargo project root.                   |          | `.`     |
+| `token`   | The token to publish to crates.io.                    | ✅       |         |
+| `dry-run` | If true, run cargo publish with the `--dry-run` flag. |          | `false` |

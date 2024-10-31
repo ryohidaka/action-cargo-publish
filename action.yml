@@ -9,6 +9,19 @@ branding:
   icon: send
 
 inputs:
+  path:
+    description: "The path to the Cargo project root."
+    required: false
+    default: "."
+
+  token:
+    description: "The token to publish to crates.io."
+    required: true
+
+  dry-run:
+    description: "If true, run cargo publish with the --dry-run flag."
+    required: false
+    default: "false"
 
 runs:
   using: "composite"
@@ -18,4 +31,12 @@ runs:
 
     - name: Set GitHub Path
       run: echo "GITHUB_ACTION_PATH=${GITHUB_ACTION_PATH}" >> $GITHUB_ENV
+      shell: bash
+
+    - name: Publish to crates.io
+      run: |
+        $GITHUB_ACTION_PATH/scripts/publish.sh \
+          "${{ inputs.path }}" \
+          "${{ inputs.token }}" \
+          "${{ inputs.dry-run }}"
       shell: bash
