@@ -5,8 +5,8 @@ author: "ryohidaka"
 description: "GitHub Actions to publish Rust crates to crates.io."
 
 branding:
-  color: green
-  icon: send
+  color: gray-dark
+  icon: upload
 
 inputs:
   path:
