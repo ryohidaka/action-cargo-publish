@@ -1,12 +1,9 @@
-# composite-action-template
+# action-cargo-publish
 
-[![GitHub Release](https://img.shields.io/github/v/release/ryohidaka/composite-action-template)](https://github.com/ryohidaka/composite-action-template/releases/)
-[![Test Action](https://github.com/ryohidaka/composite-action-template/actions/workflows/test.yml/badge.svg)](https://github.com/ryohidaka/composite-action-template/actions/workflows/test.yml)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Release](https://img.shields.io/github/v/release/ryohidaka/action-cargo-publish)](https://github.com/ryohidaka/action-cargo-publish/releases/)
+[![Test Action](https://github.com/ryohidaka/action-cargo-publish/actions/workflows/test.yml/badge.svg)](https://github.com/ryohidaka/action-cargo-publish/actions/workflows/test.yml)
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B6TVH92)
-
-Template to create composite-action for GitHub Actions.
+GitHub Actions to publish Rust crates to crates.io.
 
 ## Usage
 
@@ -20,7 +17,7 @@ jobs:
   bump-uses:
     runs-on: ubuntu-latest
     steps:
-      - uses: ryohidaka/composite-action-template@v0.3.1
+      - uses: ryohidaka/action-cargo-publish@v1
         with:
           who-to-greet: "Mona the Octocat"
 
